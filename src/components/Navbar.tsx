@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -18,6 +19,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
 import SettingsIcon from '@mui/icons-material/Settings';
+import HomeIcon from '@mui/icons-material/Home';
 import './navbar.scss';
 
 type Anchor = 'left';
@@ -50,39 +52,58 @@ export default function Navbar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button>
-          <ListItemIcon>
-            <AccountCircleIcon />
-          </ListItemIcon>
-          <ListItemText primary="Profile" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <DonutLargeIcon />
-          </ListItemIcon>
-          <ListItemText primary="Charts" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <CategoryIcon />
-          </ListItemIcon>
-          <ListItemText primary="Categories" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <ShowChartIcon />
-          </ListItemIcon>
-          <ListItemText primary="Planing" />
-        </ListItem>
+        <Link to="/" className='link'>
+          <ListItem button>
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItem>
+        </Link>
+        <Link to="profile" className='link'>
+          <ListItem button>
+            <ListItemIcon>
+              <AccountCircleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Profile" />
+          </ListItem>
+        </Link>
+        <Link to="charts" className='link'>
+          <ListItem button>
+            <ListItemIcon>
+              <DonutLargeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Charts" />
+          </ListItem>
+        </Link>
+        <Link to="categories" className='link'>
+          <ListItem button>
+            <ListItemIcon>
+              <CategoryIcon />
+            </ListItemIcon>
+            <ListItemText primary="Categories" />
+          </ListItem>
+        </Link>
+        <Link to="planing" className='link'>
+          <ListItem button>
+            <ListItemIcon>
+              <ShowChartIcon />
+            </ListItemIcon>
+            <ListItemText primary="Planing" />
+          </ListItem>
+        </Link>
       </List>
+
       <Divider />
       <List>
-        <ListItem button>
-          <ListItemIcon>
-            <SettingsIcon />
-          </ListItemIcon>
-          <ListItemText primary="Settings" />
-        </ListItem>
+        <Link to="settings" className='link'>
+          <ListItem button>
+            <ListItemIcon>
+              <SettingsIcon />
+            </ListItemIcon>
+            <ListItemText primary="Settings" />
+          </ListItem>
+        </Link>
         <ListItem button>
           <ListItemIcon>
             <LogoutIcon />
