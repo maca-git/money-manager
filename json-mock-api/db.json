@@ -1,0 +1,63 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Food",
+      "type": "expenses"
+    },
+    {
+      "id": 2,
+      "name": "Sport",
+      "type": "expenses"
+    },
+    {
+      "id": 3,
+      "name": "Salary",
+      "type": "income"
+    },
+    {
+      "id": 4,
+      "name": "Sale",
+      "type": "income"
+    }
+  ],
+  "expenses": [
+    {
+      "id": 1,
+      "date": "28.02.2022",
+      "category": "Food",
+      "cost": 120,
+      "comment": "1 kg meet"
+    },
+    {
+      "id": 2,
+      "date": "02.03.2022",
+      "category": "Food",
+      "cost": 800,
+      "comment": ""
+    },
+    {
+      "id": 3,
+      "date": "10.03.2022",
+      "category": "Sport",
+      "cost": 1000,
+      "comment": ""
+    }
+  ],
+  "income": [
+    {
+      "id": 1,
+      "date": "28.02.2022",
+      "category": "Sale",
+      "cost": 5000,
+      "comment": "sale old phone"
+    },
+    {
+      "id": 2,
+      "date": "10.03.2022",
+      "category": "Salary",
+      "cost": 50000,
+      "comment": ""
+    }
+  ]
+}
